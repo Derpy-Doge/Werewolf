@@ -1,6 +1,6 @@
-# 2D-Template
+# 3D-Template
 
-The following is a template you can use when creating a 2D project in class. If working with team members, you must share your new repository with them so they can work on it.
+The following is a template you can use when creating a 3D project in class. If working with team members, you must share your new repository with them so they can work on it.
 
 ## Instructions
 
