@@ -721,7 +721,7 @@ Transform:
   m_GameObject: {fileID: 908827446}
   serializedVersion: 2
   m_LocalRotation: {x: 0.17364088, y: 0.0090236375, z: -0.0015911107, w: 0.9847664}
-  m_LocalPosition: {x: -0.8, y: 3.7, z: -10}
+  m_LocalPosition: {x: 0.16, y: 2.52, z: -7.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1004,6 +1004,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   globalLight: {fileID: 2076195002}
+  dayDuration: 180
 --- !u!1 &1207967897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,8 +1482,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 1, g: 0.80363804, b: 0.6273585, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.6862745, g: 0.8117647, b: 0.90588236, a: 1}
+  m_Intensity: 0.4
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1525,7 +1526,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 2981
+  m_ColorTemperature: 15000
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -1545,7 +1546,7 @@ Transform:
   m_GameObject: {fileID: 2076195001}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -0.000000022351742, y: 3, z: 0.000000033527613}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
