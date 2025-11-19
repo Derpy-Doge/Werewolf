@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Breanna/Menu/Level 1.unity
+    guid: 23ace7d985de57c479adbe49cfa1b9f5
+  - enabled: 1
+    path: Assets/Breanna/Menu/Start Menu.unity
+    guid: 7072160db8aec3548a20c7de57f12f63
+  - enabled: 1
+    path: Assets/Breanna/Menu/Credits.unity
+    guid: 4466ca02d25bcd54ab3dc45344423747
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c465cf6eef8c49444904123cb4809af2,
       type: 2}
