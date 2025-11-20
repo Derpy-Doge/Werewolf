@@ -17,6 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Breanna/Menu/Credits.unity
     guid: 4466ca02d25bcd54ab3dc45344423747
+  - enabled: 1
+    path: Assets/Shu/Shu Scenes/Game-Over.unity
+    guid: 63f81808a3b39054899532735fde4611
+  - enabled: 1
+    path: Assets/Shu/Shu Scenes/Main Menu.unity
+    guid: f947694241269b041b22cda59e41fb87
+  - enabled: 1
+    path: Assets/Shu/Shu Scenes/Shu's scene.unity
+    guid: eabbb14f5739c20428ea3bd76ab3db11
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c465cf6eef8c49444904123cb4809af2,
       type: 2}
