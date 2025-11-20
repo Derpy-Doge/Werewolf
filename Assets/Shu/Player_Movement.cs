@@ -14,28 +14,28 @@ public class Player_Movement : MonoBehaviour
     void Update()
     {
         //Movement
-        if (Input.GetKey(KeyCode.LeftArrow) == true)
+        if (Input.GetKey(KeyCode.LeftArrow) == true || Input.GetKey(KeyCode.A) == true)
         {
             Vector3 newVelocity = myRigidbody.linearVelocity;
             newVelocity.x = -movespeed;
 
             myRigidbody.linearVelocity = newVelocity;
         }
-        if (Input.GetKey(KeyCode.RightArrow) == true)
+        if (Input.GetKey(KeyCode.RightArrow) == true || Input.GetKey(KeyCode.D) == true)
         {
             Vector3 newVelocity = myRigidbody.linearVelocity;
             newVelocity.x = movespeed;
 
             myRigidbody.linearVelocity = newVelocity;
         }
-        if (Input.GetKey(KeyCode.DownArrow) == true)
+        if (Input.GetKey(KeyCode.DownArrow) == true || Input.GetKey(KeyCode.S) == true)
         {
             Vector3 newVelocity = myRigidbody.linearVelocity;
             newVelocity.z = -movespeed;
 
             myRigidbody.linearVelocity = newVelocity;
         }
-        if (Input.GetKey(KeyCode.UpArrow) == true)
+        if (Input.GetKey(KeyCode.UpArrow) == true || Input.GetKey(KeyCode.W) == true)
         {
             Vector3 newVelocity = myRigidbody.linearVelocity;
             newVelocity.z = movespeed;
