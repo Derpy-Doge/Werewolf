@@ -34,12 +34,15 @@ public class TimeManager : MonoBehaviour
     public Light globalLight;
 
     private float currentTime;
-    public float dayDuration = 180; // real seconds...
+    public float dayDuration = 180; // minutes? idek atp...
+
+    public bool isDay;
+    public bool isNight;
 
 
     void Start()
     {
-        Time.timeScale = 100f; // __ times faster than rl seconds
+        Time.timeScale = 1f; // __ times faster than rl seconds
 
         globalLight.intensity = .75f;
         hours = 7;
@@ -53,9 +56,9 @@ public class TimeManager : MonoBehaviour
     void Update()
     {
         tempSeconds = Time.deltaTime + tempSeconds;
-        if(tempSeconds >= 60) // the seconds in each minute, resets each minute
+        if(tempSeconds >= .5f) // the seconds in each minute, resets each minute
         {
-            minutes += 1;
+            minutes ++;
             tempSeconds = 0;
             Debug.Log ("holy gleebus it works"); // i didnt think I was allowed to put swears in here :skull:
         }
@@ -65,7 +68,7 @@ public class TimeManager : MonoBehaviour
 
         currentTime = Time.deltaTime + currentTime;
 
-        float rotationAngle = ((currentTime / 86400f) * 360f);
+        float rotationAngle = ((currentTime / 720f) * 360f);
 
         globalLight.transform.rotation = Quaternion.Euler(50f, rotationAngle, 0f);
     }
@@ -90,23 +93,23 @@ public class TimeManager : MonoBehaviour
     {
         if( value == 6) //sunrise
         {
-            StartCoroutine(LerpLight(gradientNightToSunrise, 2f));
-            StartCoroutine(FadeLightIntesity(.75f, 2981f, 2f));
+            StartCoroutine(LerpLight(gradientNightToSunrise, 5f));
+            StartCoroutine(FadeLightIntesity(.75f, 2981f, 5f));
         }
         else if (value == 8) //day
         {
-            StartCoroutine(LerpLight(gradientSunriseToDay, 2f));
-            StartCoroutine(FadeLightIntesity(1f, 5000, 2f));
+            StartCoroutine(LerpLight(gradientSunriseToDay, 5f));
+            StartCoroutine(FadeLightIntesity(1f, 5000, 5f));
         }
         else if(value == 18) //sunset
         {
-            StartCoroutine(LerpLight(gradientDayToSunset, 2f));
-            StartCoroutine(FadeLightIntesity(.75f, 2981f, 2f));
+            StartCoroutine(LerpLight(gradientDayToSunset, 5f));
+            StartCoroutine(FadeLightIntesity(.75f, 2981f, 5f));
         }
         else if(value == 22) //night
         {
-            StartCoroutine(LerpLight(gradientSunsetToNight, 2f));
-            StartCoroutine(FadeLightIntesity(.4f, 15000f, 2f));
+            StartCoroutine(LerpLight(gradientSunsetToNight, 5f));
+            StartCoroutine(FadeLightIntesity(.4f, 15000f, 5f));
         }
     }
 
