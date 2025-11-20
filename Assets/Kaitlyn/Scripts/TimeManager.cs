@@ -33,18 +33,20 @@ public class TimeManager : MonoBehaviour
     public Gradient gradientSunsetToNight;
     public Light globalLight;
 
-    private float currentTime = 0f;
-    public float dayDuration = 10800; // in seconds...
+    private float currentTime;
+    public float dayDuration = 180; // real seconds...
 
 
     void Start()
     {
-        Time.timeScale = 8f; // __ times faster than rl seconds
+        Time.timeScale = 100f; // __ times faster than rl seconds
 
         globalLight.intensity = .75f;
         hours = 7;
         globalLight.colorTemperature = 2981f;
+        globalLight.color = new Color(1f, 0.8039216f, 0.627451f); // sunset color...
         //start an hour after sunrise
+
 
     }
 
@@ -59,17 +61,18 @@ public class TimeManager : MonoBehaviour
         }
 
         OnMinuteChange(minutes);
+        OnHourChange(hours);
 
         currentTime = Time.deltaTime + currentTime;
-        
-        float rotationAngle = currentTime * 1f;
+
+        float rotationAngle = ((currentTime / 86400f) * 360f);
 
         globalLight.transform.rotation = Quaternion.Euler(50f, rotationAngle, 0f);
     }
 
     private void OnMinuteChange(int value)
     {
-        globalLight.transform.Rotate(Vector3.up, (1f / currentTime) * 1f, Space.World);
+        globalLight.transform.Rotate(Vector3.up, (1f / dayDuration) * 1f, Space.World);
         if(value >= 60) //after 60 minutes add 1 hour and reset minutes after 24 hours add 1 day and reset hours, days never reset
         {
             hours++;
@@ -79,6 +82,7 @@ public class TimeManager : MonoBehaviour
         {
             days++;
             hours = 0;
+            currentTime = 0;
         }
     }
 

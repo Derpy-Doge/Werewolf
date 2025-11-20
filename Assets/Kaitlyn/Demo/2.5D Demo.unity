@@ -1004,7 +1004,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   globalLight: {fileID: 2076195002}
-  dayDuration: 180
+  dayDuration: 10800
 --- !u!1 &1207967897
 GameObject:
   m_ObjectHideFlags: 0
