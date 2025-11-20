@@ -240,6 +240,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &259064453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3337081870516035082, guid: 8b1e076bdee01c24d8da62db052e581c,
+    type: 3}
+  m_PrefabInstance: {fileID: 961085555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &259064456
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259064453}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.72693086, y: 1.88, z: 0.2}
+  m_Center: {x: 0.0016429424, y: -0.060000002, z: 0}
 --- !u!1 &398483706
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,7 +864,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3337081870516035082, guid: 8b1e076bdee01c24d8da62db052e581c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 259064456}
   m_SourcePrefab: {fileID: 100100000, guid: 8b1e076bdee01c24d8da62db052e581c, type: 3}
 --- !u!1 &1113549739
 GameObject:
@@ -1267,6 +1298,7 @@ GameObject:
   - component: {fileID: 1642506280}
   - component: {fileID: 1642506279}
   - component: {fileID: 1642506285}
+  - component: {fileID: 1642506286}
   m_Layer: 0
   m_Name: BluBox
   m_TagString: Untagged
@@ -1436,6 +1468,28 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!95 &1642506286
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642506278}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5342875c124f41646809e3c8a1404367, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1680724558
 PrefabInstance:
   m_ObjectHideFlags: 0
