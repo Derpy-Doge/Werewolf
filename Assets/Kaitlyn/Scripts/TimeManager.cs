@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using UnityEngine;
 
+// if days go from 7am to 8pm(or 20:00) itll be abt 6 and a half minutes
+
 public class TimeManager : MonoBehaviour
 {
     private int minutes;
@@ -42,7 +44,7 @@ public class TimeManager : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 1f; // __ times faster than rl seconds
+        Time.timeScale = 1f; // __ times faster than rl seconds... didnt end up using it cause like i cant do math :skull:
 
         globalLight.intensity = .75f;
         hours = 7;
@@ -50,7 +52,8 @@ public class TimeManager : MonoBehaviour
         globalLight.color = new Color(1f, 0.8039216f, 0.627451f); // sunset color...
         //start an hour after sunrise
 
-
+        isDay = true;
+        isNight = false;
     }
 
     void Update()
@@ -95,6 +98,8 @@ public class TimeManager : MonoBehaviour
         {
             StartCoroutine(LerpLight(gradientNightToSunrise, 5f));
             StartCoroutine(FadeLightIntesity(.75f, 2981f, 5f));
+            isDay = true;
+            isNight = false;
         }
         else if (value == 8) //day
         {
@@ -106,10 +111,12 @@ public class TimeManager : MonoBehaviour
             StartCoroutine(LerpLight(gradientDayToSunset, 5f));
             StartCoroutine(FadeLightIntesity(.75f, 2981f, 5f));
         }
-        else if(value == 22) //night
+        else if(value == 20) //night
         {
             StartCoroutine(LerpLight(gradientSunsetToNight, 5f));
             StartCoroutine(FadeLightIntesity(.4f, 15000f, 5f));
+            isDay = false;
+            isNight = true;
         }
     }
 
